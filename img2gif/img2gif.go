@@ -68,7 +68,7 @@ func EncodeImgPaletted(images *[]image.Image) []*image.Paletted {
 
 // Write a img2gif file from a paletted image slice
 // d = delay in 100ths of a second per frame.
-func WriteGif(im *[]*image.Paletted, d int, path string) {
+func WriteGif(im *[]*image.Paletted, d int, path string) error {
 	//
 	g := &gif.GIF{}
 
@@ -82,7 +82,15 @@ func WriteGif(im *[]*image.Paletted, d int, path string) {
 		println(err)
 	}
 	defer f.Close()
-	gif.EncodeAll(f, g)
+	return gif.EncodeAll(f, g)
 }
 
+// Executes the functions above in the right order.
+// Takes an array of file paths pointing to images as input.
+// p is a path to the output file.
+func BuildGif(f *[]string, p string) error {
+	img := ReadImages(f)
+	im_p := EncodeImgPaletted(&img)
+	return WriteGif(&im_p, 5, p)
+}
 
