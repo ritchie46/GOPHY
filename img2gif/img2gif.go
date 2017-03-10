@@ -88,9 +88,10 @@ func WriteGif(im *[]*image.Paletted, d int, path string) error {
 // Executes the functions above in the right order.
 // Takes an array of file paths pointing to images as input.
 // p is a path to the output file.
-func BuildGif(f *[]string, p string) error {
+// fps: frames per second.
+func BuildGif(f *[]string, fps int, p string) error {
 	img := ReadImages(f)
 	im_p := EncodeImgPaletted(&img)
-	return WriteGif(&im_p, 5, p)
+	return WriteGif(&im_p, 100 / fps, p)
 }
 
