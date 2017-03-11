@@ -1,4 +1,12 @@
+# GOPHY
+
+
 ```go
-	files := []string {"./src/github.com/ritchie46/GOPHY/test/1.png", "./src/github.com/ritchie46/GOPHY/test/3.png"}
-	img2gif.BuildGif(&files, 2, "./src/github.com/ritchie46/GOPHY/test/out.gif")
+	files := []string {"./picture_1.png",
+	"./picture_2.png"}
+
+	fps := 2
+	out := "./out.gif"
+
+	img2gif.BuildGif(&files, fps, out)
 ```

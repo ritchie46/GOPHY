@@ -85,6 +85,7 @@ func WriteGif(im *[]*image.Paletted, d int, path string) error {
 	return gif.EncodeAll(f, g)
 }
 
+
 // Executes the functions above in the right order.
 // Takes an array of file paths pointing to images as input.
 // p is a path to the output file.

@@ -41,7 +41,7 @@ Thumbs.db
 */.idea/*
 */.__pycache__/*
 *.xml
-*.PNG
+#*.PNG
 *.pdf
 /__pycache__
 *__pycache__

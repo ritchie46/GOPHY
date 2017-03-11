@@ -1,10 +1,18 @@
 package main
 
+import "C"
+
+// Build with: go build -o img2gif.so -buildmode=c-shared main.go
+
 import (
 	"github.com/ritchie46/GOPHY/img2gif"
 )
 
+//export Build
+func Build(f []string, fps int, p string) error  {
+	return img2gif.BuildGif(&f, fps, p)
+}
+
 func main() {
-	files := []string {"./src/github.com/ritchie46/GOPHY/test/1.png", "./src/github.com/ritchie46/GOPHY/test/3.png"}
-	img2gif.BuildGif(&files, 2, "./src/github.com/ritchie46/GOPHY/test/out.gif")
+
 }
