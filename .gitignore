@@ -5,7 +5,7 @@
 *.dll
 *.exe
 *.o
-*.so
+#*.so
 
 # 
 Packages #
@@ -49,5 +49,5 @@ Thumbs.db
 *.egg*
 *concatPDF-*
 */dist
-build/
+# build/
 dist/
