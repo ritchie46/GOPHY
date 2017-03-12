@@ -7,4 +7,5 @@ setup(
     license='MIT License',
     url="http://ritchievink.com",
     packages=["gophy"],
+    include_package_data=True
 )
