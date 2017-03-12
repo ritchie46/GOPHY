@@ -57,7 +57,6 @@ func EncodeImgPaletted(images *[]image.Image) []*image.Paletted {
 
 		// Cast img.
 		i, ok := img.(*image.Paletted)
-		println(i, ok)
 		if ok {
 			g = append(g, i)
 		}
