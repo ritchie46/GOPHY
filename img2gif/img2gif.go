@@ -15,7 +15,6 @@ func ReadImages(files *[]string) []image.Image {
 	im := []image.Image{}
 
 	for _, s := range *files {
-		fmt.Println("Paths to images", s)
 		f, err := os.Open(s)
 
 		if err != nil {
