@@ -31,11 +31,12 @@ def create_go_string(s):
     b = s.encode("ascii")
     return GoString(b, len(b))
 
+# Define the required argument types. Does not seem to be mandatory.
 lib.Build.argtypes = [GoSliceGoString, c_uint, GoString]
 
 py_arr = ["./res/g1.gif", "./res/g3.gif"]
 c_arr = (GoString * 2)(create_go_string(py_arr[0]), create_go_string(py_arr[1]))
-go_slice = GoSliceGoString(c_arr)
+go_slice = GoSliceGoString(c_arr, 2, 2)
 
 
 lib.Build(go_slice, 2, create_go_string("test.gif"))

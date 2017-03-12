@@ -53,7 +53,7 @@ extern "C" {
 #endif
 
 
-extern GoInterface Build(GoSlice p0, GoInt p1, GoString p2);
+extern void Build(GoSlice p0, GoInt p1, GoString p2);
 
 #ifdef __cplusplus
 }
