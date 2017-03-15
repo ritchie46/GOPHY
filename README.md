@@ -4,6 +4,8 @@
 
 Small Python binding to the GIF module in Golang. Create an animated GIF from an array of image locations.
 
+Currently only working on Linux!
+
 Supported image types are:
 
 * PNG
