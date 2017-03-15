@@ -1,6 +1,6 @@
 /* Created by "go tool cgo" - DO NOT EDIT. */
 
-/* package command-line-arguments */
+/* package github.com/ritchie46/GOPHY */
 
 /* Start of preamble from import "C" comments.  */
 

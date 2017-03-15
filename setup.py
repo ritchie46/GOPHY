@@ -9,5 +9,5 @@ setup(
     url="http://ritchievink.com",
     packages=["gophy"],
     package_dir={"gophy": "gophy"},
-    package_data={"gophy": ["build/*.so", "build/*.h"]},
+    package_data={"gophy": ["build/*"]},
 )

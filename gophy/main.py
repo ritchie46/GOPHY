@@ -19,19 +19,16 @@ def img2gif(img, out, fps=4):
     dll = None
     if _os == "Linux":
         if arch == "64bit":
-            dll = "img2gif-linux-amd64.so"
+            dll = "GOPHY-linux-amd64.so"
         else:
-            dll = "img2gif-linux-386.so"
+            dll = "GOPHY-linux-386.so"
     elif _os == "Windows":
-        if arch == "64bit":
-            dll = "img2gif-windows-amd64.so"
-        else:
-            dll = "img2gif-windows-386.so"
+        raise Exception("Windows not yet supported")
     elif _os == "Darwin":
         if arch == "64bit":
-            dll = "img2gif-darwin-amd64.so"
+            dll = "GOPHY-darwin-10.6-amd64.dylib"
         else:
-            dll = "img2gif-darwin-386.so"
+            dll = "GOPHY-darwin-10.6-386.dylib"
 
     if dll is None:
         raise Exception("This operation system or architecture is not supported")

@@ -4,8 +4,6 @@
 
 Small Python binding to the GIF module in Golang. Create an animated GIF from an array of image locations.
 
-Currently only working on Linux!
-
 Supported image types are:
 
 * PNG
@@ -40,3 +38,8 @@ Supported image types are:
 ## Installation
 
 `$pip install git+https://github.com/ritchie46/GOPHY.git`
+
+## OS
+
+Windows is not yet supported.
+Tested on Linux, OSx should probably work.
